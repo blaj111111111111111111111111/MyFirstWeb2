@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Webpage with Navigation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: #000000;
+      padding: 10px;
+      text-align: center;
+    }
+    nav button {
+      background-color: #0075ff;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+    nav button:hover {
+      background-color: #4200f2;
+    }
+    section {
+      padding: 40px;
+      display: none;
+    }
+    section.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('about')">About</button>
+    <button onclick="showSection('contact')">Contact</button>
+    <button onclick="showSection('arrange_appointment')">Arrange</button>
+    <button onclick="showSection('our_staff')">Our staff</button>
+    <button onclick="showSection('Complain')">Complaints?</button>
+  </nav>
+
+  <section id="home" class="active">
+    <h1>Welcome to My Website</h1>
+    <p>This is the homepage, welcome this is a our homepage we will fix all your technical or coding problems.</p>
+    <img src="Python.svg.png" alt="image" border="3" height="100" />
+    <img src="istockphoto-1435220822-612x612.jpg" alt="image" border="3" height="100" />
+    </section>
+
+  <section id="about">
+    <h1>About Us</h1>
+    <p>Here you can learn more about us.</p>
+        <p>We have been the most reliable coding and tech problem solver for years</p>
+    <img src="trophy-flat-style_78370-3222.jpg" alt="image" border="3" height="100" />
+  </section>
+    
+    <section id="arrange_appointment">
+    <h1>Schedule an appointment?</h1>
+    <p>Wanting to schedule? input your details and choose a date.</p>
+            <label for="fname"><b>First Name:</b></label><br>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="fname2"><b>Last Name:</b></label><br>
+            <input type="text" id="fname2" name="fname2"><br><br>
+            
+            <label for="email"><b>Email:</b></label><br>
+            <input type="text" id="email" name="email"><br><br>
+            <label for="number"><b>Phone Number:</b></label><br>
+            <input type="text" id="number" name="number"><br><br>
+            <p><b>Please select your date of when you need tech solutions:</b></p>
+            <label for="ddate">Appointment date:</label><br>
+            <input type="date" id="ddate" name="ddate"><br><br>
+            <p>Thank you for your purchase</p>
+    <img src="360_F_102067027_5Qvkx0MEFrZHzTZiGPYfWAHCdsRuo5qk.jpg" alt="image" border="3" height="100" />
+
+    </section>
+    <section id="our_staff">
+    <h1>Our Best staff</h1>
+    <p>We have a big selection of staff but here is our most important members.</p>
+    <p>Our CEO</p>
+    <img src="istockphoto-1413766112-612x612.jpg" alt="image" border="3" height="100" />
+    <p>Our Assistant CEO</p>
+    <img src="istockphoto-171336661-612x612.jpg" alt="image" border="3" height="100" />
+    <p>Our Business Manager</p>
+    <img src="r491q5_large.png" alt="image" border="3" height="100" />
+    </section>
+    
+  <section id="Complain">
+    <h1>About Us</h1>
+    <p></p>
+        <p>Have a complaint? send it to us</p>
+    <img src="send-message-by-phone-concept-illustration_114360-20242.jpg" alt="image" border="3" height="100" />
+    <label for="message"><b>AdditionalNotes:</b></label><br>
+    <textarea name="message" rows="10" cols="30">Type here!</textarea>
+    <input type="submit" value="Send">
+  </section>
+    
+  <section id="contact">
+    <h1>Contact</h1>
+    <p>Get in touch with us through this section. call if you have a problem with our services 3030304932</p>
+      <p>If you need help call us or send us a text</p>
+    <img src="360_F_470827022_YDf6gPOoqK8GrdzolMOKSMZzQ6Z7VHAD.jpg" alt="image" border="3" height="100" />
+      <label for="pin"><b>MessageUs:</b></label><br>
+      <input type="text" id="pin" name="pin"><br><br>
+  </section>
+
+  <script>
+    function showSection(id) {
+      // Hide all sections
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => section.classList.remove('active'));
+
+      // Show the selected section
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
+<html>
+
